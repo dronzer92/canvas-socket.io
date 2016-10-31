@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<title>Canvas Socket.io</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+	<link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+	<header>
+		<nav class="main-nav">
+			<div class="brand">Canvas Socket.io</div>
+			<ul class="menu">
+				<li class="">
+					<label>File</label>
+					<ul class="sub-menu">
+						<li><label>New</label></li>
+						<li><label>Save</label></li>
+					</ul>
+				</li>
+				<li>
+					<label>Edit</label>
+					<ul class="sub-menu">
+						<li><label>Preferences</label></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div class="header-text">
+				Total connected users <span id="conected-user">N/A</span>
+			</div>
+		</nav>
+		
+		<nav class="toolbar-nav">
+			<ul class="toolbar">
+				<li class="button" id="tool_rendom_color">Rendom color</li>
+			</ul>
+		</nav>
+	</header>
+	
+
+	<div id="canvas-container"><!-- our canvas will be inserted here--></div>
+
+	<!-- Required Libraries -->
+	<script src="public/lib/jquery.min.js"></script>
+	<script src="public/lib/jquery.event.drag-2.0.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	
+	<!-- Scripts -->
+	<script src="public/js/script.js"></script>
+	<script src="public/js/events.js"></script>
+	<script src="public/js/utilities.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			canvasApp.init();
+		});
+	</script>
+</body>
+</html>

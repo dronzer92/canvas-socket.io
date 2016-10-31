@@ -1,0 +1,14 @@
+{
+  "name": "canvas-socket.io",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raheel Khan <dronzer92@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.5.1"
+  }
+}
