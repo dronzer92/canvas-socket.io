@@ -1,4 +1,9 @@
-
+/*
+* Canvas Socket.io - collaborative canvas board
+*
+* @author  Raheel Khan <dronzer92@gmail.com>
+* @licence The MIT License (MIT)
+*/
 
 var canvasApp = canvasApp || {};
 
@@ -6,9 +11,7 @@ var canvasApp = canvasApp || {};
 	'use-strict';
 
 	var elements = {};
-	var socket = io();
 	canvasApp.$elements = elements;
-	canvasApp.socket = socket;
 
 	/*
 	* @summary: Initilize Application
@@ -27,6 +30,8 @@ var canvasApp = canvasApp || {};
 		elements.ctx.strokeStyle = user.color;
 		elements.ctx.lineWidth = 3;
 		elements.ctx.lineCap = "round";
+		
+		canvasApp.socket = new Socket(user);
 	}
 
 	/*
@@ -76,12 +81,7 @@ var canvasApp = canvasApp || {};
 	};
 
 
-	/*
-	* @summary: Socket Draw
-	*/
-	socket.on('draw', function(data){
-		return canvasApp.draw(data);
-	});
+	
 
 
 })();

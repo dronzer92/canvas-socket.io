@@ -1,3 +1,10 @@
+/*
+* Canvas Socket.io - collaborative canvas board
+*
+* @author  Raheel Khan <dronzer92@gmail.com>
+* @licence The MIT License (MIT)
+*/
+
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
