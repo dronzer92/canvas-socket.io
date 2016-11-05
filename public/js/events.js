@@ -59,9 +59,13 @@ var canvasApp = canvasApp || {};
 		}
 	});
 	
-	
-	$('#tool_rendom_color').click(function(e){
-		canvasApp.user.changeColor();
-	});
+	/* Toolbar click events */
+	(function() {
+		var evts = canvasApp.toolbar.click;
+		for (let key in evts) {
+			var id = document.getElementById(key);
+			id.addEventListener('click', evts[key]);
+		}
+	})();
 	
 })();
