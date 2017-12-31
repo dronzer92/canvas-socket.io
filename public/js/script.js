@@ -32,6 +32,8 @@ var canvasApp = canvasApp || {};
 		elements.ctx.lineCap = "round";
 		
 		canvasApp.socket = new Socket(user);
+		
+		canvasApp.toolbar.init();
 	}
 
 	/*

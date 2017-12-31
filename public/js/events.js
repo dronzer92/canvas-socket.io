@@ -59,13 +59,4 @@ var canvasApp = canvasApp || {};
 		}
 	});
 	
-	/* Toolbar click events */
-	(function() {
-		var evts = canvasApp.toolbar.click;
-		for (let key in evts) {
-			var id = document.getElementById(key);
-			id.addEventListener('click', evts[key]);
-		}
-	})();
-	
 })();

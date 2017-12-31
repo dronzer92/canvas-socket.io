@@ -13,7 +13,33 @@ var canvasApp = canvasApp || {};
 	var toolbar = {};
 	canvasApp.toolbar = toolbar;
 	
-	toolbar.selected = 'pencli';
+	toolbar.init = function() {
+		var self = this;
+		var ul = document.getElementById('toolbar');
+		var evts = self.click;
+		for (let key in evts) {
+			var elm = document.createElement('li');
+			elm.className = "button";
+			elm.id = key;
+			elm.innerHTML = self.icons[key];
+			elm.addEventListener('click', evts[key]);
+			
+			ul.appendChild(elm);
+		}
+		
+	}
+	
+	toolbar.selected = 'tool_pencil';
+	
+	toolbar.icons = {
+		tool_select: '<i class="fa fa-mouse-pointer"></i>',
+		tool_pencil: '<i class="fa fa-pencil"></i></li>',
+		tool_rect: '<i class="fa fa-square"></i>',
+		tool_circle: '<i class="fa fa-circle"></i>',
+		tool_line: '<i class="fa fa-minus"></i>',
+		tool_text: '<i class="fa fa-font"></i>',
+		tool_rendom_color: 'Rendom color'
+	}
 	
 	toolbar.click = {
 		tool_select: function() {
